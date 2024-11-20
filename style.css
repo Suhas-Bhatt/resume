@@ -1,36 +1,61 @@
+
+
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #f4f4f4, #e2e2e2); /* Soft gradient background */
   color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Header */
 header {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
+  border-bottom: 4px solid #444; /* Add border for a sleek look */
 }
 
+/* Header Title and Subtitle */
 header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 header p {
-  font-size: 18px;
+  font-size: 20px;
+  font-style: italic;
+  color: #ddd;
 }
 
+/* Section Styling */
 section {
-  padding: 20px;
-  margin: 20px;
+  padding: 30px;
+  margin: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 section h2 {
-  font-size: 24px;
+  font-size: 28px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
+/* List Styling */
 ul {
   list-style-type: none;
   padding: 0;
@@ -38,15 +63,58 @@ ul {
 
 ul li {
   font-size: 18px;
-  margin: 5px 0;
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
 }
 
+ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #4caf50; /* Green checkmark for each list item */
+  font-size: 18px;
+}
+
+/* Footer Styling */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #333;
   color: white;
   position: fixed;
   width: 100%;
   bottom: 0;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Light and Dark Theme */
+body.light-theme {
+  background: linear-gradient(135deg, #f4f4f4, #e2e2e2); /* Light theme gradient */
+  color: #333;
+}
+
+body.dark-theme {
+  background: linear-gradient(135deg, #333, #555); /* Dark theme gradient */
+  color: #fff;
+}
+
+/* Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #45a049;
 }
